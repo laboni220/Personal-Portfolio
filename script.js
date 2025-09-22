@@ -20,7 +20,7 @@ window.addEventListener('scroll', scrollHeader);
 
 /*=============== TYPED.JS (TYPING EFFECT) ===============*/
 const typed = new Typed('#typed-text', {
-    strings: ['Real Estate Enthusiast', 'Finance Enthusiast', 'Skilled Organizer'],
+    strings: ['Real Estate & Finance Enthusiast', 'Skilled Organizer'],
     typeSpeed: 75,
     backSpeed: 50,
     backDelay: 2000,
@@ -109,3 +109,4 @@ const sendEmail = (e) => {
 
 
 contactForm.addEventListener('submit', sendEmail);
+
