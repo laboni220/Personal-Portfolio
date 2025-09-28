@@ -5,11 +5,11 @@
 :root {
     --header-height: 3.5rem;
     /* Colors */
-    --primary-color: #0077b6;
-    --primary-color-light: #48cae4;
+    --primary-color: #29495a;
+    --primary-color-light: #1a8296;
     --primary-color-alt: #03045e;
-    --title-color: #1e293b;
-    --text-color: #475569;
+    --title-color: #234f96;
+    --text-color: #0e3975;
     --text-color-light: #f8fafc;
     --body-color: #f8fafc;
     --container-color: #ffffff;
@@ -285,3 +285,4 @@ img { max-width: 100%; height: auto; display: block; }
     .container { margin-left: 1rem; margin-right: 1rem; }
     .home__social { display: none; }
 }
+
