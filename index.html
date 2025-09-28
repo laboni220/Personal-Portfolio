@@ -6,27 +6,32 @@
     <title>Laboni Chakma | Personal Portfolio</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
     <link rel="stylesheet" href="style.css">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Laboni Chakma</a>
-            <div class="nav__menu">
+            <a href="#home" class="nav__logo">Laboni Chakma</a>
+            
+            <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li><a href="#home" class="nav__link active-link">Home</a></li>
                     <li><a href="#about" class="nav__link">About</a></li>
                     <li><a href="#skills" class="nav__link">Skills</a></li>
                     <li><a href="#experience" class="nav__link">Experience</a></li>
                     <li><a href="#education" class="nav__link">Education</a></li>
-                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                    <li><a href="#certifications" class="nav__link">Certifications</a></li>
                 </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
     </header>
@@ -45,12 +50,11 @@
                     <p>An enthusiastic and proactive undergraduate student committed to contributing positively to real-world projects in the finance and real estate sectors.</p>
                     <div class="home__buttons">
                         <a href="Laboni_Chakma_CV.pdf" download class="button">Download CV <i class="fa-solid fa-download"></i></a>
-                        <a href="#contact" class="button button--ghost">Contact Me</a>
                     </div>
                 </div>
 
                 <div class="home__image" data-aos="fade-left">
-                    <img src="profile.jpg" alt="Laboni Chakma Profile Picture">
+                    <img src="My Pic.jpg" alt="Laboni Chakma Profile Picture">
                 </div>
 
                 <a href="#about" class="home__scroll">
@@ -83,46 +87,52 @@
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My Core Competencies</span>
             <div class="skills__container container">
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-magnifying-glass-chart"></i><span>Market Analysis</span></div>
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="150"><i class="fa-solid fa-house-circle-check"></i><span>Property Valuation</span></div>
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-city"></i><span>Urban Planning</span></div>
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="250"><i class="fa-solid fa-sack-dollar"></i><span>Real Estate Finance</span></div>
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-comments"></i><span>Communication</span></div>
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="350"><i class="fa-solid fa-handshake"></i><span>Negotiation Skills</span></div>
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="400"><i class="fa-solid fa-chart-pie"></i><span>Financial Reporting</span></div>
-                <div class="skill__item" data-aos="fade-up" data-aos-delay="450"><i class="fa-solid fa-file-excel"></i><span>MS Office Suite</span></div>
+                <div class="skill__item" data-aos="fade-up" data-aos-delay="100"><i class="fa-solid fa-city"></i><span>Urban Planning</span></div>
+                <div class="skill__item" data-aos="fade-up" data-aos-delay="150"><i class="fa-solid fa-sack-dollar"></i><span>Real Estate Finance</span></div>
+                <div class="skill__item" data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-comments"></i><span>Communication</span></div>
+                <div class="skill__item" data-aos="fade-up" data-aos-delay="250"><i class="fa-solid fa-handshake"></i><span>Negotiation Skills</span></div>
+                <div class="skill__item" data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-chart-pie"></i><span>Financial Reporting</span></div>
+                <div class="skill__item" data-aos="fade-up" data-aos-delay="350"><i class="fa-solid fa-file-excel"></i><span>MS Office Suite</span></div>
             </div>
         </section>
 
         <section class="experience section" id="experience">
             <h2 class="section__title">Professional Experience</h2>
-            <span class="section__subtitle">My Recent Activities</span>
+            <span class="section__subtitle">My Journey & Contributions</span>
             <div class="experience__container container">
-                <div class="experience__card" data-aos="fade-up">
-                    <img src="https://placehold.co/600x400/0077b6/FFF?text=My+Work+1" alt="Freshers' Orientation Event" class="experience__img">
+                 <div class="experience__card" data-aos="fade-up">
                     <div class="experience__content">
+                         <i class="fa-solid fa-sitemap experience__icon"></i>
+                        <h3 class="experience__title">Organizing Secretary</h3>
+                        <p class="experience__meta">Indigenous Association, DIU | 2023 - Present</p>
+                        <p class="experience__description">Assisted in organizing orientation programs, cultural events, and student meetups, working collaboratively with committee members to ensure smooth execution of events.</p>
+                    </div>
+                </div>
+                 <div class="experience__card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience__content">
+                         <i class="fa-solid fa-users-viewfinder experience__icon"></i>
                         <h3 class="experience__title">Event Organizer - Freshers' Orientation</h3>
-                        <p class="experience__meta">Daffodil International University | Sept 2024</p>
+                        <p class="experience__meta">Daffodil International University | Sept 2023</p>
                         <p class="experience__description">Anchored the orientation program, introducing guests and engaging new students to ensure a welcoming event.</p>
                     </div>
                 </div>
-                <div class="experience__card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://placehold.co/600x400/0096C7/FFF?text=My+Work+2" alt="Real Estate BootCamp" class="experience__img">
+                 <div class="experience__card" data-aos="fade-up" data-aos-delay="200">
                     <div class="experience__content">
+                        <i class="fa-solid fa-people-roof experience__icon"></i>
                         <h3 class="experience__title">Organizer - Real Estate BootCamp</h3>
-                        <p class="experience__meta">Daffodil International University | Aug 2024</p>
-                        <p class="experience__description">Played a key role in organizing and executing the "Real Estate BootCamp 2024," contributing to its success.</p>
+                        <p class="experience__meta">Daffodil International University | Aug 2023</p>
+                        <p class="experience__description">Played a key role in organizing and executing the "Real Estate BootCamp 2023," contributing to its success.</p>
                     </div>
                 </div>
-                <div class="experience__card" data-aos="fade-up" data-aos-delay="200">
-                     <img src="https://placehold.co/600x400/00B4D8/FFF?text=My+Work+3" alt="DIU Job Utsob Volunteer" class="experience__img">
+                 <div class="experience__card" data-aos="fade-up" data-aos-delay="300">
                     <div class="experience__content">
+                        <i class="fa-solid fa-hand-holding-hand experience__icon"></i>
                         <h3 class="experience__title">Volunteer - DIU Job Utsob</h3>
                         <p class="experience__meta">Daffodil International University | Nov 2024</p>
                         <p class="experience__description">Provided active support as a volunteer, contributing to the smooth operation of the university's largest job fair.</p>
                     </div>
                 </div>
-                 <div class="experience__card experience__card--no-img" data-aos="fade-up" data-aos-delay="300">
+                 <div class="experience__card" data-aos="fade-up" data-aos-delay="400">
                     <div class="experience__content">
                          <i class="fa-solid fa-masks-theater experience__icon"></i>
                         <h3 class="experience__title">Cultural Club Member</h3>
@@ -130,12 +140,20 @@
                         <p class="experience__description">Actively assisted in organizing campus events and managing stage activities as a member of the cultural club.</p>
                     </div>
                 </div>
+                 <div class="experience__card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="experience__content">
+                         <i class="fa-solid fa-earth-asia experience__icon"></i>
+                        <h3 class="experience__title">International Workshop Participant</h3>
+                        <p class="experience__meta">ASEAN Cultural Heritage Workshop | May 2024</p>
+                        <p class="experience__description">Successfully participated in a 5-day international workshop on ASEAN cultural heritage, music, and rituals, gaining cross-cultural collaboration experience.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="education section" id="education">
-             <h2 class="section__title">Education & Certifications</h2>
-             <span class="section__subtitle">My Academic Journey</span>
+             <h2 class="section__title">Education</h2>
+             <span class="section__subtitle">My Academic Background</span>
              <div class="education__container container" data-aos="fade-up">
                  <div class="education__item">
                      <h4>Bachelor of Business Studies in Real Estate (Ongoing)</h4>
@@ -147,33 +165,59 @@
                      <p>YWCA Higher Secondary School</p>
                      <p><em>Year of Passing: 2021 | GPA: 4.33/5.00</em></p>
                  </div>
-                 <div class="education__item">
-                    <h4>Certificate of Completion - Real Estate BootCamp</h4>
-                    <p>Daffodil International University | Aug 2024</p>
-                </div>
-                <div class="education__item">
-                    <h4>Volunteer Certificate - Job Utsob 2024</h4>
-                    <p>Daffodil International University | Nov 2024</p>
-                </div>
              </div>
         </section>
 
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in Touch</span>
-            <div class="contact__container container" data-aos="fade-up">
-                <form class="contact__form" id="contact-form">
-                    <div class="contact__inputs">
-                        <input type="text" name="from_name" placeholder="Name" class="contact__input" required>
-                        <input type="email" name="from_email" placeholder="Email" class="contact__input" required>
-                    </div>
-                    <input type="text" name="subject" placeholder="Subject" class="contact__input" required>
-                    <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
-                    
-                    <div class="contact__message" id="contact-message"></div>
-                    
-                    <button type="submit" class="button">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-                </form>
+        <section class="certifications section" id="certifications">
+            <h2 class="section__title">Certifications</h2>
+            <span class="section__subtitle">Licenses & Certifications</span>
+          
+            <div class="certifications__container container">
+              
+              <div class="certifications__item" data-aos="fade-up">
+                <div class="certifications__info">
+                  <h4 class="certifications__title">
+                    Certificate of Completion - Real Estate BootCamp
+                  </h4>
+                  <p class="certifications__subtitle">
+                    Daffodil International University | Aug 2023
+                  </p>
+                </div>
+                <div class="certifications__image-preview">
+                  <img src="PXL_20250914_070125460.jpg" alt="Real Estate BootCamp Certificate">
+                </div>
+                <div class="certifications__image-mobile">
+                  <img src="PXL_20250914_070125460.jpg" alt="Real Estate BootCamp Certificate">
+                </div>
+              </div>
+          
+              <div class="certifications__item" data-aos="fade-up" data-aos-delay="100">
+                <div class="certifications__info">
+                  <h4 class="certifications__title">
+                    Certificate of Participation - DIU Job Utsob
+                  </h4>
+                  <p class="certifications__subtitle">
+                    Daffodil International University | Nov 2024
+                  </p>
+                </div>
+                <div class="certifications__image-preview">
+                  <img src="PXL_20250914_070119172.jpg" alt="DIU Job Utsob Volunteer Certificate">
+                </div>
+                <div class="certifications__image-mobile">
+                  <img src="PXL_20250914_070119172.jpg" alt="DIU Job Utsob Volunteer Certificate">
+                </div>
+              </div>
+          
+            </div>
+        </section>
+  
+        <section class="connect section" id="connect">
+            <div class="connect__container container" data-aos="fade-up">
+                <h2 class="section__title">Let's Connect</h2>
+                <p class="connect__text">I am always open to discussing new opportunities and challenges in the real estate and finance sectors. I look forward to connecting with you!</p>
+                <div class="connect__buttons">
+                    <a href="https://www.linkedin.com/" target="_blank" class="button">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
         </section>
     </main>
