@@ -51,7 +51,7 @@ navLinks.forEach(n => n.addEventListener('click', linkAction));
 window.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('typed-text')) {
         const typed = new Typed('#typed-text', {
-            strings: ['Real Estate and Finance Enthusiast', 'Skilled Organizer'],
+            strings: ['Real Estate and Finance Enthusiast'],
             typeSpeed: 75,
             backSpeed: 50,
             backDelay: 2000,
@@ -112,3 +112,4 @@ function scrollUp() {
     }
 }
 window.addEventListener('scroll', scrollUp);
+
