@@ -8,7 +8,6 @@ AOS.init({
 /*=============== HEADER SCROLL EFFECT ===============*/
 function scrollHeader() {
     const header = document.getElementById('header');
-    // When the scroll is greater than 50 viewport height, add the 'scrolled' class
     if (this.scrollY >= 50) {
         header.classList.add('scrolled');
     } else {
@@ -18,13 +17,47 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader);
 
 
+/*=============== SHOW & HIDE MOBILE MENU ===============*/
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+// Show menu
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+        document.body.classList.add('show-nav'); // Prevents scrolling when menu is open
+    });
+}
+
+// Hide menu
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+        document.body.classList.remove('show-nav');
+    });
+}
+
+// Hide menu when a link is clicked on mobile
+const navLinks = document.querySelectorAll('.nav__link');
+function linkAction() {
+    navMenu.classList.remove('show-menu');
+    document.body.classList.remove('show-nav');
+}
+navLinks.forEach(n => n.addEventListener('click', linkAction));
+
+
 /*=============== TYPED.JS (TYPING EFFECT) ===============*/
-const typed = new Typed('#typed-text', {
-    strings: ['Real Estate & Finance Enthusiast', 'Skilled Organizer'],
-    typeSpeed: 75,
-    backSpeed: 50,
-    backDelay: 2000,
-    loop: true,
+window.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('typed-text')) {
+        const typed = new Typed('#typed-text', {
+            strings: ['Real Estate and Finance Enthusiast', 'Skilled Organizer'],
+            typeSpeed: 75,
+            backSpeed: 50,
+            backDelay: 2000,
+            loop: true,
+        });
+    }
 });
 
 
@@ -36,33 +69,34 @@ function scrollActive() {
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 58;
+        const sectionTop = current.offsetTop - 58; // Adjusted for better accuracy
         const sectionId = current.getAttribute('id');
-        const navLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+        const link = document.querySelector(`.nav__list a[href*=${sectionId}]`);
 
-        if (navLink) { // Check if the link exists
+        if (link) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLink.classList.add('active-link');
+                link.classList.add('active-link');
             } else {
-                navLink.classList.remove('active-link');
+                link.classList.remove('active-link');
             }
         }
     });
-}
+};
 window.addEventListener('scroll', scrollActive);
 
 
 /*=============== SMOOTH SCROLLING FOR NAV LINKS ===============*/
-const navLinks = document.querySelectorAll('.nav__link, .home__scroll, .button--ghost');
+const allLinks = document.querySelectorAll('.nav__link, .home__scroll, .nav__logo');
 
-navLinks.forEach(link => {
+allLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(href);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
@@ -78,35 +112,3 @@ function scrollUp() {
     }
 }
 window.addEventListener('scroll', scrollUp);
-
-
-/*=============== EMAILJS CONTACT FORM ===============*/
-const contactForm = document.getElementById('contact-form');
-const contactMessage = document.getElementById('contact-message');
-
-const sendEmail = (e) => {
-    e.preventDefault();
-
-    // IMPORTANT: Replace with your actual EmailJS IDs
-    const serviceID = 'YOUR_SERVICE_ID';
-    const templateID = 'YOUR_TEMPLATE_ID';
-    const publicKey = 'YOUR_PUBLIC_KEY';
-
-    emailjs.sendForm(serviceID, templateID, '#contact-form', publicKey)
-        .then(() => {
-            contactMessage.textContent = 'Message sent successfully! ✅';
-            contactMessage.style.color = 'var(--success-color)';
-            setTimeout(() => {
-                contactMessage.textContent = '';
-                contactForm.reset();
-            }, 5000);
-        }, (error) => {
-            contactMessage.textContent = 'Message not sent (service error) ❌';
-            contactMessage.style.color = 'var(--error-color)';
-            console.error('EmailJS Error:', error);
-        });
-};
-
-
-contactForm.addEventListener('submit', sendEmail);
-
